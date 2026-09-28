@@ -290,7 +290,8 @@ function createBalloons() {
 
 function createFloatingPhotos() {
 
-    const container = document.getElementById("floating-photos");
+    const container =
+        document.getElementById("floating-photos");
 
     container.innerHTML = "";
 
@@ -309,19 +310,18 @@ function createFloatingPhotos() {
         img.src = photo;
         img.classList.add("floating-photo");
 
-        img.style.left = (2 + Math.random() * 96) + "%";
+        img.style.left =
+            (2 + Math.random() * 96) + "%";
 
         img.style.animationDuration =
-              (12 + Math.random() * 8) + "s";
+            "15s";
 
         img.style.animationDelay =
-             (Math.random() * 10) + "s";
+            (Math.random() * 2) + "s";
 
         container.appendChild(img);
     });
 }
-
-
 /* =========================================
    CREATE CONFETTI
    ========================================= */
