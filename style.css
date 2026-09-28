@@ -1839,3 +1839,57 @@ body {
     position: relative;
     z-index: 10;
 }
+/* FLOATING PHOTOS - VISIBILITY FIX */
+
+.floating-photos {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating-photo {
+    position: absolute;
+    bottom: -50px;
+
+    width: 145px;
+    height: 175px;
+
+    padding: 8px;
+    background: white;
+    border-radius: 10px;
+
+    object-fit: cover;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    animation: photoFloat 15s linear infinite;
+    opacity: 0;
+}
+
+@keyframes photoFloat {
+
+    0% {
+        transform: translateY(0) rotate(-8deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-55vh) rotate(8deg);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(-10deg);
+        opacity: 0;
+    }
+}
