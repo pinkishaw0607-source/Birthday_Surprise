@@ -238,22 +238,6 @@ function createHearts() {
 const letterContinueButton =
     document.getElementById("letter-continue-btn");
 
-
-letterContinueButton.addEventListener("click", function () {
-
-    document
-        .getElementById("stage-4")
-        .classList.remove("active");
-
-    document
-        .getElementById("stage-5")
-        .classList.add("active");
-
-    createBalloons();
-
-    createConfetti();
-
-});
 /* =========================================
    CREATE BALLOONS
    ========================================= */
@@ -322,7 +306,7 @@ function createFloatingPhotos() {
 
         const img = document.createElement("img");
 
-        img.src = "images/" + photo;
+        img.src = photo;
         img.classList.add("floating-photo");
 
         img.style.left = (2 + Math.random() * 96) + "%";
